@@ -19,6 +19,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 
 }
@@ -27,7 +32,15 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+//    api rootProject.ext.dependencies["rxpermissions"]
+
+    api rootProject.ext.dependencies["retrofit"]
+//    api rootProject.ext.dependencies["retrofit-converter-gson"]
+//    api rootProject.ext.dependencies["retrofit-adapter-rxjava"]
+//    api rootProject.ext.dependencies["rxjava"]
+
 }
